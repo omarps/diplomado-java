@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!-- 
+    http://pastebin.com/Cafg7BHN
+    Document   : sample
+    Created on : 2/12/2013, 07:21:59 PM
+    Author     : Omar
+-->
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+
+    <jsp:directive.page contentType="text/html" pageEncoding="windows-1252"/>
+    <!-- any content can be specified here, e.g.: -->
+    <head><title>Ejemplo (Sintaxis XML)</title></head>
+    <body>
+        <div align="center">
+            <h1>Ejemplo (Sintaxis XML)</h1>
+            <h2>Num1: <jsp:expression>Math.random() * 10</jsp:expression></h2>
+            <jsp:scriptlet>
+            double num2 = Math.random() * 100;
+            </jsp:scriptlet>
+            <h2>Num2: <jsp:expression>num2</jsp:expression></h2>
+            <jsp:declaration>
+            private double num3 = Math.random() * 1000;
+            </jsp:declaration>
+            <h2>Num3: <jsp:expression>num3</jsp:expression></h2>
+        </div>
+    </body>
+
+</jsp:root>
