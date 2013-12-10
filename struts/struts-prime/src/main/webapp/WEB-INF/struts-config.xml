@@ -20,6 +20,13 @@
     </global-forwards>
 
     <action-mappings>
+        <action name="PrimeForm" 
+                path="/prime" 
+                scope="session" 
+                type="com.java.struts.prime.action.PrimeAction" 
+                validate="false">
+            <forward name="success" path="/ShowPrime.jsp" />
+        </action>
         <action path="/Welcome" forward="/welcomeStruts.jsp"/>
     </action-mappings>
     
