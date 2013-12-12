@@ -6,8 +6,11 @@
 
 package com.java.struts.actions.action;
 
+<<<<<<< HEAD
 import com.java.struts.actions.SuggestionUtils;
 import com.java.struts.actions.form.UserFormBean;
+=======
+>>>>>>> da5fd25aa307d9a78b75e3270e27867d76560254
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.struts.action.ActionForm;
@@ -22,8 +25,11 @@ public class RegisterAction3 extends org.apache.struts.action.Action {
 
     /* forward name="success" path="" */
     private static final String SUCCESS = "success";
+<<<<<<< HEAD
     private static final String BAD_ADDRESS = "bad-address";
     private static final String BAD_PASSWORD = "bad-password";
+=======
+>>>>>>> da5fd25aa307d9a78b75e3270e27867d76560254
 
     /**
      * This is the action called from the Struts framework.
@@ -40,6 +46,7 @@ public class RegisterAction3 extends org.apache.struts.action.Action {
             HttpServletRequest request, HttpServletResponse response)
             throws Exception {
         
+<<<<<<< HEAD
         UserFormBean userFormBean = (UserFormBean) form;
         String email = userFormBean.getEmail();
         String password = userFormBean.getPassword();
@@ -56,5 +63,8 @@ public class RegisterAction3 extends org.apache.struts.action.Action {
         } else {
             return mapping.findForward(SUCCESS);
         }
+=======
+        return mapping.findForward(SUCCESS);
+>>>>>>> da5fd25aa307d9a78b75e3270e27867d76560254
     }
 }
