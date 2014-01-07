@@ -7,6 +7,7 @@
 
 <struts-config>
     <form-beans>
+        <form-bean name="HtmlSelectOptionForm" type="com.java.struts.html.form.HtmlSelectOptionForm"/>
         <form-bean name="HtmlHiddenForm" 
                    type="com.java.struts.html.form.HtmlHiddenForm"/>
         <form-bean name="UserForm" 
@@ -44,6 +45,16 @@
                 type="com.java.struts.html.action.HtmlHiddenAction">
             <forward name="success" path="/pages/display.jsp" />
         </action>
+        <action input="/pages/select.jsp" 
+                name="HtmlSelectOptionForm" 
+                path="/Select" 
+                scope="request" 
+                type="com.java.struts.html.action.HtmlSelectOptionAction">
+            <forward name="success" path="/pages/display_select.jsp" />
+        </action>
+        <action path="/SelectPage" 
+                type="org.apache.struts.actions.ForwardAction" 
+                parameter="/pages/select.jsp" />
         <action path="/Welcome" forward="/welcomeStruts.jsp"/>
     </action-mappings>
     
