@@ -7,6 +7,8 @@
 
 <struts-config>
     <form-beans>
+        <form-bean name="HtmlHiddenForm" 
+                   type="com.java.struts.html.form.HtmlHiddenForm"/>
         <form-bean name="UserForm" 
                    type="com.java.struts.html.form.UserForm"/>
     
@@ -26,11 +28,21 @@
                 parameter="/pages/login.jsp"/>
         <action name="UserForm" 
                 path="/login" 
-                input="/pages/login.jsp"
+                input="/pages/login.jsp "
                 scope="request" 
                 type="com.java.struts.html.action.UserAction" 
                 validate="true">
             <forward name="success" path="/pages/welcome.jsp" />
+        </action>
+        <action path="/HiddenPage" 
+                type="org.apache.struts.actions.ForwardAction" 
+                parameter="/pages/hidden.jsp" />
+        <action input="/pages/hidden.jsp" 
+                name="HtmlHiddenForm" 
+                path="/Hidden" 
+                scope="request" 
+                type="com.java.struts.html.action.HtmlHiddenAction">
+            <forward name="success" path="/pages/display.jsp" />
         </action>
         <action path="/Welcome" forward="/welcomeStruts.jsp"/>
     </action-mappings>

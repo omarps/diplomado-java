@@ -4,10 +4,8 @@
  * and open the template in the editor.
  */
 
-package com.java.struts.actions.action;
+package com.java.struts.html.action;
 
-import com.java.struts.actions.SuggestionUtils;
-import com.java.struts.actions.form.UserFormBean;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.struts.action.ActionForm;
@@ -18,12 +16,10 @@ import org.apache.struts.action.ActionMapping;
  *
  * @author Omar
  */
-public class RegisterAction3 extends org.apache.struts.action.Action {
+public class HtmlHiddenAction extends org.apache.struts.action.Action {
 
     /* forward name="success" path="" */
     private static final String SUCCESS = "success";
-    private static final String BAD_ADDRESS = "bad-address";
-    private static final String BAD_PASSWORD = "bad-password";
 
     /**
      * This is the action called from the Struts framework.
@@ -40,21 +36,6 @@ public class RegisterAction3 extends org.apache.struts.action.Action {
             HttpServletRequest request, HttpServletResponse response)
             throws Exception {
         
-        UserFormBean userFormBean = (UserFormBean) form;
-        String email = userFormBean.getEmail();
-        String password = userFormBean.getPassword();
-        
-        if ((email == null) || (email.trim().length() < 3) 
-                || (email.indexOf("@") == -1)) {
-            request.setAttribute("suggestionBean", 
-                    SuggestionUtils.getSuggestionBean());
-            return mapping.findForward(BAD_ADDRESS);
-        } else if ((password == null) || (password.trim().length() < 6)) {
-            request.setAttribute("suggestionBean", 
-                    SuggestionUtils.getSuggestionBean());
-            return mapping.findForward(BAD_PASSWORD);
-        } else {
-            return mapping.findForward(SUCCESS);
-        }
+        return mapping.findForward(SUCCESS);
     }
 }
