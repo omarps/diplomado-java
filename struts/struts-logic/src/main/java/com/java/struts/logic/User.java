@@ -14,6 +14,10 @@ public class User {
     
     private String username;
     private String url;
+    private String email;
+    
+    public User() {
+    }
     
     public User(String username, String url) {
         this.username = username;
@@ -46,6 +50,20 @@ public class User {
      */
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    /**
+     * @return the email
+     */
+    public String getEmail() {
+        return email;
+    }
+
+    /**
+     * @param email the email to set
+     */
+    public void setEmail(String email) {
+        this.email = email;
     }
     
 }

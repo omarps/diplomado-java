@@ -27,6 +27,10 @@
                 type="com.java.struts.logic.actions.LogicExampleAction">
             <forward name="success" path="/logic_example.jsp" />
         </action>
+        <action path="/LogicExample2" 
+                type="com.java.struts.logic.actions.LogicExample2Action">
+            <forward name="success" path="/logic_example2.jsp" />
+        </action>
         <action path="/Welcome" forward="/welcomeStruts.jsp"/>
     </action-mappings>
     
