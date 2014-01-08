@@ -23,6 +23,10 @@
                 type="com.java.struts.logic.actions.PrintMessageAction">
             <forward name="success" path="/print_message.jsp" />
         </action>
+        <action path="/LogicExample" 
+                type="com.java.struts.logic.actions.LogicExampleAction">
+            <forward name="success" path="/logic_example.jsp" />
+        </action>
         <action path="/Welcome" forward="/welcomeStruts.jsp"/>
     </action-mappings>
     
