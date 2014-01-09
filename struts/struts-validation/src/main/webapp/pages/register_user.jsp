@@ -28,6 +28,15 @@
             <bean:message key="label.user.name" /> : 
             <html:text property="username" size="20" />
             <br/>
+            <bean:message key="label.user.pwd" /> : 
+            <html:text property="pwd" size="20" />
+            <br/>
+            <bean:message key="label.user.pwd2" /> : 
+            <html:text property="pwd2" size="20" />
+            <br/>
+            <bean:message key="label.user.email" /> : 
+            <html:text property="email" size="20" />
+            <br/>
             <br/>
             <html:submit>
                 <bean:message key="label.user.button.submit" />
