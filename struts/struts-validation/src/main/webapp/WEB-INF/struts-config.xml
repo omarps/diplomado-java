@@ -9,6 +9,11 @@
     <form-beans>
         <form-bean name="UserForm" 
                    type="com.java.struts.validation.form.UserForm" />
+        <form-bean name="LoginForm" 
+                   type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property name="username" type="java.lang.String" />
+            <form-property name="password" type="java.lang.String" />
+        </form-bean>
     </form-beans>
     
     <global-exceptions>
@@ -31,6 +36,15 @@
         <action path="/RegisterPage" 
                 type="org.apache.struts.actions.ForwardAction" 
                 parameter="/pages/register_user.jsp" />
+        
+        <action path="/Login" 
+                name="LoginForm"
+                input="/pages/login.jsp"
+                scope="session"
+                type="com.java.struts.validation.action.LoginForm">
+            <forward name="success" path="/pages/success.jsp" />
+            <forward name="failure" path="/pages/failure.jsp" />
+        </action>
         
         <action path="/Welcome" forward="/welcomeStruts.jsp"/>
     </action-mappings>
