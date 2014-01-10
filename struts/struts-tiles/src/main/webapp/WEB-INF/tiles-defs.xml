@@ -36,12 +36,37 @@
 
     end samples -->
 
+    <!--definicion parcial-->
     <definition name="company-template" 
                 path="/pages/tiles/common-layout.jsp">
         <put name="header" 
              value="/pages/tiles/template-green/header.jsp"/>
         <put name="footer" 
              value="/pages/tiles/template-green/footer.jsp"/>
+    </definition>
+    
+    <!--deficion completa en tiles-->
+    <definition name="menu-template" 
+                path="/pages/tiles/menu-layout.jsp">
+        <put name="title" value="Tiles Example" />
+        <put name="header" 
+             value="/pages/tiles/template-menu/header.jsp" />
+        <put name="menu" 
+             value="/pages/tiles/template-menu/menu.jsp" />
+        <put name="body" 
+             value="/pages/menu/body.jsp" />
+        <put name="footer" 
+             value="/pages/tiles/template-menu/footer.jsp" />
+    </definition>
+    
+    <definition name="friends" extends="menu-template">
+        <put name="title" value="Amigos" />
+        <put name="body" value="/pages/menu/friends.jsp" />
+    </definition>
+    
+    <definition name="office" extends="menu-template">
+        <put name="title" value="Oficina" />
+        <put name="body" value="/pages/menu/office.jsp" />
     </definition>
 
 </tiles-definitions>

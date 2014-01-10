@@ -24,6 +24,16 @@
                 parameter="/pages/user/user-form.jsp" />
         
         <action path="/Welcome" forward="/welcomeStruts.jsp"/>
+        
+<!--        <action path="/Link" 
+                type="org.apache.struts.actions.ForwardAction" 
+                parameter="/pages/tiles/menu-layout.jsp" />-->
+        <action path="/Link" parameter="method" 
+                type="com.java.struts.tiles.actions.LinkAction">
+            <forward name="friends" path="friends" />
+            <forward name="office" path="office" />
+        </action>
+        
     </action-mappings>
     
     <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
