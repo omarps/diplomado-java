@@ -6,12 +6,18 @@
 
 package com.java.spring.core.web.servlet;
 
+import com.java.spring.core.web.beans.ColorPreferences;
+import com.java.spring.core.web.beans.Customer;
+import com.java.spring.core.web.service.CustomerLookupService;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.springframework.context.ApplicationContext;
+import org.springframework.web.context.support.WebApplicationContextUtils;
 
 /**
  *
@@ -30,22 +36,47 @@ public class CustomerServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
-        try {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet CustomerServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet CustomerServlet at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        } finally {
-            out.close();
+        ApplicationContext context = 
+                WebApplicationContextUtils.getRequiredWebApplicationContext(
+                        getServletContext());
+        // customer lookup service
+        CustomerLookupService lookupService = 
+                (CustomerLookupService) context.getBean(
+                        "sampleLookupService");
+        
+        String id = request.getParameter("cust-id");
+        String address;
+        // se valida el id vacio
+        if (isEmpty(id)) {
+            address = "missing-id.jsp";
+        } else {
+            // si no esta vacio se obtiene el cliente
+            Customer customer = lookupService.getCustomer(id);
+            // si el cliente no se encontro
+            if (customer == null) {
+                // id invalido
+                request.setAttribute("id", id);
+                address = "invalid-id.jsp";
+            } else {
+                // si el cliente se encontro mostrar
+                request.setAttribute("customer", customer);
+                address = "show-customer.jsp";
+            }
         }
+        address = "/WEB-INF/jsp/" + address;
+        // actualizar color preferences
+        ColorPreferences colorPreferences = 
+                (ColorPreferences) context.getBean("colorPreferences");
+        colorPreferences.setForeground(request.getParameter("fg"));
+        colorPreferences.setBackground(request.getParameter("bg"));
+        // forward
+        RequestDispatcher dispatcher = 
+                request.getRequestDispatcher(address);
+        dispatcher.forward(request, response);
+    }
+    
+    private boolean isEmpty(String value) {
+        return ((value == null) || "".equals(value));
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
