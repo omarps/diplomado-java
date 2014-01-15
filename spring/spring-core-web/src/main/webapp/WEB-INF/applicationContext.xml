@@ -24,7 +24,7 @@
                     </bean>
                 </entry>
                 <entry key="a1235">
-                    <bean class="coreservlets.Customer">
+                    <bean class="com.java.spring.core.web.beans.Customer">
                         <property name="customerId" value="a1235"/>
                         <property name="firstName" value="Gary"/>
                         <property name="lastName" value="Mak"/>
@@ -32,7 +32,7 @@
                     </bean>
                 </entry>
                 <entry key="a1236">
-                    <bean class="coreservlets.Customer">
+                    <bean class="com.java.spring.core.web.beans.Customer">
                         <property name="customerId" value="a1236"/>
                         <property name="firstName" value="Craig"/>
                         <property name="lastName" value="Walls"/>
@@ -40,7 +40,7 @@
                     </bean>
                 </entry>
                 <entry key="a1237">
-                    <bean class="coreservlets.Customer">
+                    <bean class="com.java.spring.core.web.beans.Customer">
                         <property name="customerId" value="a1237"/>
                         <property name="firstName" value="Kyong"/>
                         <property name="lastName" value="Park"/>
