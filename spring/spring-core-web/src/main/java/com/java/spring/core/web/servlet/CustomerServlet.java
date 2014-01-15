@@ -10,7 +10,6 @@ import com.java.spring.core.web.beans.ColorPreferences;
 import com.java.spring.core.web.beans.Customer;
 import com.java.spring.core.web.service.CustomerLookupService;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

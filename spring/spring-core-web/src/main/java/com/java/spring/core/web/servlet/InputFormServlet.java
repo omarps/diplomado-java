@@ -35,7 +35,7 @@ public class InputFormServlet extends HttpServlet {
             throws ServletException, IOException {
         ApplicationContext context = 
             WebApplicationContextUtils.getRequiredWebApplicationContext(
-                  request.getSession().getServletContext());
+                  getServletContext());
         context.getBean("colorPreferences");
         String address = "/WEB-INF/jsp/input-form.jsp";
         RequestDispatcher dispatcher = 
