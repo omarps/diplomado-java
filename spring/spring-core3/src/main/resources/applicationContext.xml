@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+">
+    
+    <bean id="shape1" 
+          class="com.java.spring.core3.shapes.impl.Rectangle">
+        <property name="length" value="10"/>
+        <property name="width" value="20"/>
+    </bean>
+    
+    <bean id="shape2" 
+          class="com.java.spring.core3.shapes.impl.Circle">
+        <constructor-arg value="10" />
+    </bean>
+
+</beans>
