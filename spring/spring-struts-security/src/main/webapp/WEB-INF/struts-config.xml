@@ -19,12 +19,21 @@
     </global-forwards>
 
     <action-mappings>
-        <action path="/Welcome" forward="/welcomeStruts.jsp"/>
+        <action path="/welcome" 
+                type="org.springframework.web.struts.DelegatingActionProxy">
+            <forward name="success" path="/pages/welcome.jsp" />
+        </action>
     </action-mappings>
     
     <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
 
     <message-resources parameter="com/java/spring/struts/security/ApplicationResource"/>    
+    
+    <plug-in 
+        className="org.springframework.web.struts.ContextLoaderPlugin">
+        <set-property property="contextConfigLocation" 
+                      value="/WEB-INF/action-servlet.xml" />
+    </plug-in>
     
     <!-- ========================= Tiles plugin ===============================-->
     <!--
