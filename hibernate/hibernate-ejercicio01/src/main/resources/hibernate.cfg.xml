@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">
+        org.hibernate.dialect.MySQLDialect
+    </property>
+    <property name="hibernate.connection.driver_class">
+        com.mysql.jdbc.Driver
+    </property>
+    <property name="hibernate.connection.url">
+        jdbc:mysql://localhost/hibernate_ejercicio01
+    </property>
+    <property name="hibernate.connection.username">
+        hibernate1
+    </property>
+    <property name="hibernate.connection.password">
+        hibernate1
+    </property>
+    <!--<mapping resource="../java/com/java/hibernate/ejercicio01/Profesor.hbm.xml"/>-->
+    <mapping resource="com/java/hibernate/ejercicio01/Profesor.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>
