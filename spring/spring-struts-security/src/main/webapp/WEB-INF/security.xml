@@ -5,7 +5,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
          xsi:schemaLocation="
             http://www.springframework.org/schema/beans 
-            http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+            http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
             http://www.springframework.org/schema/security 
             http://www.springframework.org/schema/security/spring-security-3.0.xsd">
 
@@ -20,7 +20,7 @@
         <remember-me />
     </http>
     
-    <authentication-manager>
+<!--    <authentication-manager>
         <authentication-provider>
             <password-encoder hash="md5" />
             <user-service>
@@ -29,6 +29,12 @@
                       authorities="ROLE_ADMIN"/>
             </user-service>
         </authentication-provider>
+    </authentication-manager>-->
+    <authentication-manager>
+        <authentication-provider ref="myAuthenticationProvider" />
     </authentication-manager>
+    
+    <b:bean id="myAuthenticationProvider" 
+            class="com.java.spring.struts.security.MyAuthenticationProvider" />
     
 </b:beans>
