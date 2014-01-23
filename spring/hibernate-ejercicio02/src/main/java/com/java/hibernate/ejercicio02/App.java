@@ -1,6 +1,7 @@
 package com.java.hibernate.ejercicio02;
 
-import com.java.hibernate.ejercicio02.domain.Seguro;
+//import com.java.hibernate.ejercicio02.domain.Seguro;
+import com.java.hibernate.ejercicio02.jpa.Seguro;
 import java.util.Date;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

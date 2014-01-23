@@ -7,6 +7,7 @@
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate_ejercicio01?zeroDateTimeBehavior=convertToNull</property>
     <property name="hibernate.connection.username">hibernate1</property>
     <property name="hibernate.connection.password">hibernate1</property>
-    <mapping resource="com/java/hibernate/ejercicio02/persistence/Seguro.hbm.xml"/>
+    <!--<mapping resource="com/java/hibernate/ejercicio02/persistence/Seguro.hbm.xml"/>-->
+    <mapping class="com.java.hibernate.ejercicio02.jpa.Seguro" />
   </session-factory>
 </hibernate-configuration>
