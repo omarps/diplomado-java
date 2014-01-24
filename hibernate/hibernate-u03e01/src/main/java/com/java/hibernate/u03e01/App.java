@@ -1,7 +1,9 @@
 package com.java.hibernate.u03e01;
 
-import com.java.hibernate.u03e01.domain.CorreoElectronico;
-import com.java.hibernate.u03e01.domain.Profesor;
+//import com.java.hibernate.u03e01.domain.CorreoElectronico;
+//import com.java.hibernate.u03e01.domain.Profesor;
+import com.java.hibernate.u03e01.jpa.CorreoElectronico;
+import com.java.hibernate.u03e01.jpa.Profesor;
 import java.util.ArrayList;
 import java.util.List;
 import org.hibernate.Session;
