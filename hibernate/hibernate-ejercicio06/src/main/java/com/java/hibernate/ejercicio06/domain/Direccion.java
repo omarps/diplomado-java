@@ -18,7 +18,7 @@ public class Direccion implements Serializable {
     private String calle;
     private int numero;
     private String poblacion;
-//    municipio;
+    private Municipio municipio;
     private String provincia;
 
     /**
@@ -89,6 +89,20 @@ public class Direccion implements Serializable {
      */
     public void setProvincia(String provincia) {
         this.provincia = provincia;
+    }
+
+    /**
+     * @return the municipio
+     */
+    public Municipio getMunicipio() {
+        return municipio;
+    }
+
+    /**
+     * @param municipio the municipio to set
+     */
+    public void setMunicipio(Municipio municipio) {
+        this.municipio = municipio;
     }
     
 }

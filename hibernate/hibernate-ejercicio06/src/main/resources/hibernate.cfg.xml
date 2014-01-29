@@ -10,5 +10,6 @@
     <mapping resource="com/java/hibernate/ejercicio06/persistence/Profesor.hbm.xml"/>
     <mapping resource="com/java/hibernate/ejercicio06/persistence/Direccion.hbm.xml"/>
     <mapping resource="com/java/hibernate/ejercicio06/persistence/CorreoElectronico.hbm.xml"/>
+    <mapping resource="com/java/hibernate/ejercicio06/persistence/Municipio.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>
