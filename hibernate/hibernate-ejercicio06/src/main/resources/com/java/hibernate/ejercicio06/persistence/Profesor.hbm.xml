@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.java.hibernate.ejercicio06.domain.Profesor" 
+         table="profesor">
+        <id column="Id" name="id" type="integer">
+            <generator class="increment" />
+        </id>
+      
+        <component name="nombre">
+            <property name="nombre"/>
+            <property name="ape1"/>
+            <property name="ape2"/>
+        </component>
+        
+        <one-to-one name="direccion" cascade="all" />
+        
+        <list name="correosElectronicos" 
+              cascade="all" inverse="false">
+            <key>
+                <column name="idProfesor" />
+            </key>
+            <list-index>
+                <column name="idx" />
+            </list-index>
+            <one-to-many 
+                class="com.java.hibernate.ejercicio06.domain.CorreoElectronico" />
+        </list>
+    </class>
+</hibernate-mapping>
