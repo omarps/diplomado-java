@@ -10,6 +10,7 @@ import com.java.hibernate.dao.BussinessException;
 import com.java.hibernate.ejercicio07.dao.UsuarioDao;
 import com.java.hibernate.ejercicio07.dao.impl.UsuarioDaoImpl;
 import com.java.hibernate.ejercicio07.domain.Usuario;
+import java.util.List;
 
 /**
  *
@@ -26,6 +27,13 @@ public class UsuarioController {
     public void guardar(Usuario usuario) 
             throws BussinessException {
         usuarioDao.saveOrUpdate(usuario);
+    }
+    
+    public List<Usuario> getUsuariosByName(String name)
+            throws BussinessException {
+        List<Usuario> usuarios = 
+                usuarioDao.getUsuariosByName(name);
+        return usuarios;
     }
     
 }

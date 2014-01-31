@@ -26,7 +26,7 @@ public class GenericDaoImpl<T, ID extends Serializable>
     private final static Logger logger
             = Logger.getLogger(GenericDaoImpl.class);
 
-    SessionFactory sessionFactory;
+    protected SessionFactory sessionFactory;
 
     public GenericDaoImpl() {
         sessionFactory = HibernateUtil.getSessionFactory();
