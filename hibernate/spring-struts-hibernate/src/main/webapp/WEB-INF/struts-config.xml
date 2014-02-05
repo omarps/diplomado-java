@@ -26,6 +26,12 @@
 
     <message-resources parameter="com/java/spring/struts/hibernate/ApplicationResource"/>    
     
+    <plug-in 
+        className="org.springframework.web.struts.ContextLoaderPlugIn">
+        <set-property property="contextConfigLocation" 
+                      value="/WEB-INF/classes/applicationContext.xml" />
+    </plug-in>
+    
     <!-- ========================= Tiles plugin ===============================-->
     <!--
     This plugin initialize Tiles definition factory. This later can takes some
