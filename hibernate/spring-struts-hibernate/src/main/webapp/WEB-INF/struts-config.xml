@@ -7,6 +7,12 @@
 
 <struts-config>
     <form-beans>
+        
+        <form-bean name="dynaCustomerListForm" 
+                   type="org.apache.struts.action.DynaActionForm">
+            <form-property name="customerList" 
+                           type="java.util.List" />
+        </form-bean>
     
     </form-beans>
     
@@ -20,6 +26,13 @@
 
     <action-mappings>
         <action path="/Welcome" forward="/welcomeStruts.jsp"/>
+        
+        <action path="/ListCustomer" 
+                type="com.java.sprint.struts.hibernate.action.ListCustomerAction" 
+                name="dynaCustomerListForm">
+            <forward name="success" redirect="true" 
+                     path="/pages/customer/list_customer.jsp" />
+        </action>
     </action-mappings>
     
     <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
