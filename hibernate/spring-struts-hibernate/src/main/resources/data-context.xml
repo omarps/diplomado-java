@@ -39,6 +39,9 @@
         
         <property name="mappingResources">
             <list>
+                <value>
+                    com/java/spring/struts/hibernate/persistence/Customer.hbm.xml
+                </value>
             </list>
         </property>
     </bean>

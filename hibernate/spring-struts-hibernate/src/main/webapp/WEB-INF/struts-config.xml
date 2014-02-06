@@ -13,6 +13,9 @@
             <form-property name="customerList" 
                            type="java.util.List" />
         </form-bean>
+        
+        <form-bean name="customerForm" 
+                   type="com.java.sprint.struts.hibernate.form.CustomerForm" />
     
     </form-beans>
     
@@ -37,6 +40,15 @@
         <action path="/AddCustomerPage" 
                 type="org.apache.struts.actions.ForwardAction" 
                 parameter="/pages/customer/add_customer.jsp" />
+        
+        <action path="/AddCustomer" 
+                type="com.java.sprint.struts.hibernate.action.AddCustomerAction" 
+                name="customerForm" 
+                validate="true" 
+                input="/pages/customer/add_customer.jsp">
+            <forward name="success" redirect="true" 
+                     path="/ListCustomer.do" />
+        </action>
     </action-mappings>
     
     <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>

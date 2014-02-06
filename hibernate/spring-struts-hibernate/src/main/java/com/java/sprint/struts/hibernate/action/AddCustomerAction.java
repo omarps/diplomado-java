@@ -8,6 +8,7 @@ package com.java.sprint.struts.hibernate.action;
 
 import com.java.sprint.struts.hibernate.domain.Customer;
 import com.java.sprint.struts.hibernate.form.CustomerForm;
+import com.java.sprint.struts.hibernate.service.CustomerService;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.beanutils.BeanUtils;
@@ -29,7 +30,9 @@ public class AddCustomerAction extends ActionSupport {
             HttpServletRequest request, 
             HttpServletResponse response) throws Exception {
         
-        // TODO customerService
+        CustomerService customerService = 
+                (CustomerService) getWebApplicationContext()
+                .getBean("customerService");
         
         CustomerForm customerForm = 
                 (CustomerForm) form;
