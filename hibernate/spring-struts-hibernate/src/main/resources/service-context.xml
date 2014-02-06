@@ -4,5 +4,10 @@
 
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
 ">
+    
+    <!--Services-->
+    <bean id="customerService" 
+          class="com.java.sprint.struts.hibernate.service.impl.CustomerServiceImpl">
+    </bean>
 
 </beans>

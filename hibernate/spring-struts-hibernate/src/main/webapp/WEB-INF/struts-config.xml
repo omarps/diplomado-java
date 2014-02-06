@@ -33,6 +33,10 @@
             <forward name="success" redirect="true" 
                      path="/pages/customer/list_customer.jsp" />
         </action>
+        
+        <action path="/AddCustomerPage" 
+                type="org.apache.struts.actions.ForwardAction" 
+                parameter="/pages/customer/add_customer.jsp" />
     </action-mappings>
     
     <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
