@@ -4,43 +4,45 @@
  * and open the template in the editor.
  */
 
-package com.java.sprint.struts.hibernate.action;
+package com.java.spring.struts.hibernate.action;
 
-import com.java.sprint.struts.hibernate.domain.Customer;
-import com.java.sprint.struts.hibernate.form.CustomerForm;
-import com.java.sprint.struts.hibernate.service.CustomerService;
+import com.java.spring.struts.hibernate.domain.Customer;
+import com.java.spring.struts.hibernate.service.CustomerService;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import org.apache.commons.beanutils.BeanUtils;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
+import org.apache.struts.action.DynaActionForm;
 import org.springframework.web.struts.ActionSupport;
 
 /**
  *
  * @author Omar
  */
-public class AddCustomerAction extends ActionSupport {
-
+public class ListCustomerAction extends ActionSupport {
+    
     @Override
     public ActionForward execute(
             ActionMapping mapping, 
             ActionForm form, 
-            HttpServletRequest request, 
+            HttpServletRequest request,
             HttpServletResponse response) throws Exception {
         
         CustomerService customerService = 
                 (CustomerService) getWebApplicationContext()
                 .getBean("customerService");
         
-        CustomerForm customerForm = 
-                (CustomerForm) form;
-        Customer customer = new Customer();
-        BeanUtils.copyProperties(customer, customerForm);
+        DynaActionForm dynaCustomerListForm = 
+                (DynaActionForm) form;
         
-        // TODO addCustomer
+        List<Customer> customerList = 
+                customerService.findAllCustomer();
         
+        dynaCustomerListForm.set("customerList", customerList);
         return mapping.findForward("success");
     }
     

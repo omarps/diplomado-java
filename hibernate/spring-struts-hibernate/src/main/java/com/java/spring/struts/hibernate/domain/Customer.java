@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.java.sprint.struts.hibernate.domain;
+package com.java.spring.struts.hibernate.domain;
 
 import java.io.Serializable;
 import java.util.Date;

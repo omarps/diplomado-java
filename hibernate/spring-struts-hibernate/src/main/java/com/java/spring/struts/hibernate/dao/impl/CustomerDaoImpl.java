@@ -4,10 +4,10 @@
  * and open the template in the editor.
  */
 
-package com.java.sprint.struts.hibernate.dao.impl;
+package com.java.spring.struts.hibernate.dao.impl;
 
-import com.java.sprint.struts.hibernate.dao.CustomerDao;
-import com.java.sprint.struts.hibernate.domain.Customer;
+import com.java.spring.struts.hibernate.dao.CustomerDao;
+import com.java.spring.struts.hibernate.domain.Customer;
 import java.util.Date;
 import java.util.List;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;

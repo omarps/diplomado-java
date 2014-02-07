@@ -7,7 +7,7 @@
     
     <!--Services-->
     <bean id="customerService" 
-          class="com.java.sprint.struts.hibernate.service.impl.CustomerServiceImpl">
+          class="com.java.spring.struts.hibernate.service.impl.CustomerServiceImpl">
     </bean>
 
 </beans>

@@ -15,7 +15,7 @@
         </form-bean>
         
         <form-bean name="customerForm" 
-                   type="com.java.sprint.struts.hibernate.form.CustomerForm" />
+                   type="com.java.spring.struts.hibernate.form.CustomerForm" />
     
     </form-beans>
     
@@ -31,7 +31,7 @@
         <action path="/Welcome" forward="/welcomeStruts.jsp"/>
         
         <action path="/ListCustomer" 
-                type="com.java.sprint.struts.hibernate.action.ListCustomerAction" 
+                type="com.java.spring.struts.hibernate.action.ListCustomerAction" 
                 name="dynaCustomerListForm">
             <forward name="success" redirect="true" 
                      path="/pages/customer/list_customer.jsp" />
@@ -42,7 +42,7 @@
                 parameter="/pages/customer/add_customer.jsp" />
         
         <action path="/AddCustomer" 
-                type="com.java.sprint.struts.hibernate.action.AddCustomerAction" 
+                type="com.java.spring.struts.hibernate.action.AddCustomerAction" 
                 name="customerForm" 
                 validate="true" 
                 input="/pages/customer/add_customer.jsp">

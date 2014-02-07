@@ -4,16 +4,16 @@
  * and open the template in the editor.
  */
 
-package com.java.sprint.struts.hibernate.dao;
+package com.java.spring.struts.hibernate.service;
 
-import com.java.sprint.struts.hibernate.domain.Customer;
+import com.java.spring.struts.hibernate.domain.Customer;
 import java.util.List;
 
 /**
  *
  * @author Omar
  */
-public interface CustomerDao {
+public interface CustomerService {
     
     void addCustomer(Customer customer);
     

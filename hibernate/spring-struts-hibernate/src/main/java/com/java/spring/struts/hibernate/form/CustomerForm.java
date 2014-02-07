@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package com.java.sprint.struts.hibernate.form;
+package com.java.spring.struts.hibernate.form;
 
 import javax.servlet.http.HttpServletRequest;
 import org.apache.struts.action.ActionErrors;
