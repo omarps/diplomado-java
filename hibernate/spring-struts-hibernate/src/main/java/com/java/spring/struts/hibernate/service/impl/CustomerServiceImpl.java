@@ -5,6 +5,7 @@
  */
 package com.java.spring.struts.hibernate.service.impl;
 
+import com.java.spring.struts.hibernate.dao.CustomerDao;
 import com.java.spring.struts.hibernate.domain.Customer;
 import com.java.spring.struts.hibernate.service.CustomerService;
 import java.util.ArrayList;
@@ -17,16 +18,23 @@ import java.util.List;
  */
 public class CustomerServiceImpl implements CustomerService {
 
+    private CustomerDao customerDao;
+    
     public void addCustomer(Customer customer) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        customerDao.addCustomer(customer);
     }
 
     public List<Customer> findAllCustomer() {
-        List<Customer> customerList = new ArrayList<Customer>();
-        customerList.add(new Customer(1, "Raul", "", new Date()));
-        customerList.add(new Customer(2, "Jesus", "", new Date()));
-        customerList.add(new Customer(3, "Alvaro", "", new Date()));
+        List<Customer> customerList = 
+                customerDao.findAllCustomer();
         return customerList;
+    }
+
+    /**
+     * @param customerDao the customerDao to set
+     */
+    public void setCustomerDao(CustomerDao customerDao) {
+        this.customerDao = customerDao;
     }
 
 }

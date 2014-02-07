@@ -39,7 +39,8 @@ public class AddCustomerAction extends ActionSupport {
         Customer customer = new Customer();
         BeanUtils.copyProperties(customer, customerForm);
         
-        // TODO addCustomer
+        customerService.addCustomer(customer);
+        customerForm.reset(mapping, request);
         
         return mapping.findForward("success");
     }

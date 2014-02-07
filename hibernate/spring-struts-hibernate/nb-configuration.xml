@@ -22,6 +22,12 @@ Any value defined here will override the pom.xml file value but is only applicab
             <config-file>src/main/resources/data-context.xml</config-file>
             <config-file>src/main/resources/service-context.xml</config-file>
         </config-files>
-        <config-file-groups/>
+        <config-file-groups>
+            <config-file-group name="spring">
+                <config-file>src/main/resources/applicationContext.xml</config-file>
+                <config-file>src/main/resources/data-context.xml</config-file>
+                <config-file>src/main/resources/service-context.xml</config-file>
+            </config-file-group>
+        </config-file-groups>
     </spring-data>
 </project-shared-configuration>

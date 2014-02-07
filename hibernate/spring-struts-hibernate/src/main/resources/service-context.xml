@@ -8,6 +8,14 @@
     <!--Services-->
     <bean id="customerService" 
           class="com.java.spring.struts.hibernate.service.impl.CustomerServiceImpl">
+        <property name="customerDao" ref="customerDao" />
+    </bean>
+    
+    <!--Daos-->
+    <bean id="customerDao" 
+          class="com.java.spring.struts.hibernate.dao.impl.CustomerDaoImpl">
+        <property name="sessionFactory" 
+                  ref="sessionFactory" />
     </bean>
 
 </beans>

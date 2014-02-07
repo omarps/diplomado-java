@@ -8,8 +8,6 @@ package com.java.spring.struts.hibernate.action;
 
 import com.java.spring.struts.hibernate.domain.Customer;
 import com.java.spring.struts.hibernate.service.CustomerService;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
