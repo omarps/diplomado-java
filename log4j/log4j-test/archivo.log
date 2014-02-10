@@ -1,0 +1,10 @@
+2014-02-06 19:16:54 DEBUG com.java.log4j.test.App:25 - esto es un debug
+2014-02-06 19:16:54 INFO  com.java.log4j.test.App:27 - esto es un info
+2014-02-06 19:16:54 WARN  com.java.log4j.test.App:28 - esto es un warn
+2014-02-06 19:16:54 ERROR com.java.log4j.test.App:29 - esto es un error
+2014-02-06 19:16:54 FATAL com.java.log4j.test.App:30 - esto es un fatal
+2014-02-06 19:17:58 DEBUG com.java.log4j.test.App:25 - esto es un debug
+2014-02-06 19:17:58 INFO  com.java.log4j.test.App:27 - esto es un info
+2014-02-06 19:17:58 WARN  com.java.log4j.test.App:28 - esto es un warn
+2014-02-06 19:17:58 ERROR com.java.log4j.test.App:29 - esto es un error
+2014-02-06 19:17:58 FATAL com.java.log4j.test.App:30 - esto es un fatal
