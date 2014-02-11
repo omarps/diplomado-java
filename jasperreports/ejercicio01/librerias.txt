@@ -1,0 +1,20 @@
+JasperRerports
+C:\Program Files (x86)\Jaspersoft
+	\iReport-5.5.0\ireport\modules\ext
+jasperreports-5.5.0.jar
+jasperreports-fonts-5.5.0.jar
+commons-beanutils-1.8.2.jar
+commons-collections-3.2.1.jar
+commons-logging-1.1.jar
+commons-javaflow-20060411.jar
+commons-digester-2.1.jar
+groovy-all-2.0.1.jar
+iText-2.1.7.js2.jar
+png-encoder-1.5.jar
+poi-3.7-20101029.jar
+
+C:\Users\Omar\.m2\repository
+\mysql\mysql-connector-java\5.1.27\
+	mysql-connector-java-5.1.27.jar
+\javax\servlet\servlet-api\2.5\
+	servlet-api-2.5.jar
