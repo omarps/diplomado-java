@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.util.HashMap;
 import net.sf.jasperreports.engine.JRExporter;
 import net.sf.jasperreports.engine.JRExporterParameter;
 import net.sf.jasperreports.engine.JasperFillManager;
@@ -35,13 +36,17 @@ public class Ejercicio01a {
         
         InputStream report1 = Ejercicio01a.class.getClassLoader()
                 .getResourceAsStream("report1.jasper");
-        JasperReport reporte = 
-                (JasperReport) JRLoader.loadObject(
-                        report1);
+        HashMap<String, Object> param = 
+                new HashMap<String, Object>();
+        param.put("TITULO_REPORTE", 
+                "Titulo desde Programa Java");
+//        JasperReport reporte = 
+//                (JasperReport) JRLoader.loadObject(
+//                        report1);
         JasperPrint jasperPrint = 
                 JasperFillManager.fillReport(
-                        reporte, 
-                        null, 
+                        report1, 
+                        param, 
                         conexion);
         JRExporter exporter = new JRPdfExporter();
         exporter.setParameter(
