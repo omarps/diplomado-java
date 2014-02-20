@@ -17,6 +17,7 @@ import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.export.JRPdfExporter;
+import net.sf.jasperreports.engine.export.JRXlsExporter;
 import net.sf.jasperreports.engine.util.JRLoader;
 
 /**
@@ -48,12 +49,16 @@ public class Ejercicio01a {
                         report1, 
                         param, 
                         conexion);
-        JRExporter exporter = new JRPdfExporter();
+        JRExporter exporter = 
+                new JRPdfExporter();
+//                new JRXlsExporter();
         exporter.setParameter(
                 JRExporterParameter.JASPER_PRINT, jasperPrint);
         exporter.setParameter(
                 JRExporterParameter.OUTPUT_FILE, 
-                new File("reportePDF.pdf"));
+                new File("reportePDF.pdf")
+//                new File("reporteXls.xls")
+        );
         exporter.exportReport();
     }
     
