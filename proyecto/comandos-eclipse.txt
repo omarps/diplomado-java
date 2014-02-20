@@ -1,0 +1,18 @@
+CTRL+SHIFT+T Open Type
+- Navigate > Open Type
+- Para abrir clases Java
+
+CTRL+SHIFT+R Open Resource
+- Navigate > Open Resource
+- Para abrir struts-config.xml, jsps, *.java
+
+CTRL+H Search
+- Search > Search
+- Si no encuentro un archivo en el struts-config.xml.
+  Busco su contenido en todo el Proyecto.
+
+CTRL+O Abrir Outline
+- Para ver todos los metodos una clase Java.
+
+CTRL+T Abrir Jerarquia sobre un metodo
+- Para navegar a los metodos de interfaces e implementaciones.
